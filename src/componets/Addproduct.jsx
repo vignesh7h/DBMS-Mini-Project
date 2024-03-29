@@ -5,16 +5,18 @@ const AddProductForm = () => {
   const [branch, setBranch] = useState('');
   const [description, setDescription] = useState('');
   const [quantity, setQuantity] = useState('');
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle form submission logic here (e.g., send data to server)
-    console.log('Form submitted:', { productName, branch, description, quantity });
+    console.log('Form submitted:', { data , productName, branch, description, quantity });
     // Clear form fields after submission
     setProductName('');
     setBranch('');
     setDescription('');
     setQuantity('');
+    setData('');
   };
 
   return (
@@ -72,6 +74,7 @@ const AddProductForm = () => {
         <button className="pl-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Add Product</button>
         </div>
       </form>
+
     </div>
   );
 };

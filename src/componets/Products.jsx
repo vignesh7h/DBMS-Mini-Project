@@ -45,7 +45,11 @@ const Products = () => {
       <div className="flex gap-3">
         {/* Add your headerRight component here */}
       </div>
+
     </div>
+    </div>
+    <div>
+      handleCl
     </div>
     </>
   );

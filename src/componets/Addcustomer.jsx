@@ -3,51 +3,51 @@ import Customer from './Customer';
 
 const AddCustomer = () => {
   const [ CustomerName, setCustomerName] = useState('');
-  const [branch, setBranch] = useState('');
-  const [description, setDescription] = useState('');
-  const [quantity, setQuantity] = useState('');
+
+  const [CustomerId, setCustomerId] = useState('');
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle form submission logic here (e.g., send data to server)
-    console.log('Form submitted:', { productName, branch, description, quantity });
+    console.log('Form submitted:', { CustomerName,CustomerId });
     // Clear form fields after submission
     setCustomerName('');
-    setBranch('');
-    setDescription('');
-    setQuantity('');
+    
+    setCustomerId('');
+    
   };
 
   return (
     <div className=' card w-96 bg-base-100 shadow-xl rounded-2xl bg-slate-300'>
       <h2 className='card-title'>Add New Customer</h2>
       <form onSubmit={handleSubmit}>
+   <div><label htmlFor="productName">Customer Name:</label></div>   
         <div>
-          <label htmlFor="productName">Customer Name:</label>
+         
           <input
           className="input input-bordered input-primary w-full rounded-2xl max-w-xs"
             type="text"
             id="CustomerName"
             value={CustomerName}
-            onChange={(e) => setProductName(e.target.value)}
+            onChange={(e) => setCustomerName(e.target.value)}
             required
           />
         </div>
+        <div><label htmlFor="productName">Customer ID:</label></div>   
         <div>
-          <label htmlFor="branch">Select Branch:</label>
-          <select
-          className='rounded-2xl input input-bordered input-primary w-full max-w-xs'
-            id="branch"
-            value={branch}
-            onChange={(e) => setBranch(e.target.value)}
+         
+          <input
+          className="input input-bordered input-primary w-full rounded-2xl max-w-xs"
+            type="text"
+            id="CustomerId"
+            value={CustomerId}
+            onChange={(e) => setCustomerId(e.target.value)}
             required
-          >
-            <option value="">Select a branch</option>
-            {/* Replace this with your branch options */}
-            <option value="branch1">Branch 1</option>
-            <option value="branch2">Branch 2</option>
-          </select>
+          />
         </div>
+  
+  
     
         
         <div className="p-1 text-center">
